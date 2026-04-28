@@ -1,3 +1,5 @@
+import fs from 'fs/promises';
+import path from 'path';
 import { HealthProfile, MealPlan, Recipe } from './types';
 import { defaultProfile } from './defaults';
 
@@ -32,9 +34,6 @@ async function kvSetDb(db: DB): Promise<void> {
 }
 
 // ---------- Local file helpers ----------
-import fs from 'fs/promises';
-import path from 'path';
-
 const dataDir = path.join(process.cwd(), 'data');
 const dbPath = path.join(dataDir, 'mealcoach.json');
 

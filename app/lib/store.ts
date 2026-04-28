@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { Redis } from '@upstash/redis';
 import { HealthProfile, MealPlan, Recipe } from './types';
 import { defaultProfile } from './defaults';
 
@@ -16,8 +17,7 @@ type DB = {
 const useKV = !!(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN);
 
 // ---------- Upstash Redis helpers ----------
-function getRedis() {
-  const { Redis } = require('@upstash/redis');
+function getRedis(): Redis {
   return new Redis({
     url: process.env.UPSTASH_REDIS_REST_URL!,
     token: process.env.UPSTASH_REDIS_REST_TOKEN!

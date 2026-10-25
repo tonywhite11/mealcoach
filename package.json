@@ -10,22 +10,22 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ai-sdk/openai": "latest",
+    "@ai-sdk/openai": "3.0.53",
     "@upstash/redis": "^1.37.0",
-    "ai": "latest",
-    "lucide-react": "latest",
+    "ai": "6.0.168",
+    "lucide-react": "1.11.0",
     "next": "16.4.1",
-    "react": "latest",
-    "react-dom": "latest",
-    "zod": "latest"
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "zod": "4.3.6"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "eslint": "latest",
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
     "eslint-config-next": "16.4.1",
-    "typescript": "latest"
+    "typescript": "6.0.3"
   }
 }
 
